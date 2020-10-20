@@ -156,7 +156,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         mMap = googleMap;
         float zoom = 15;
 
-        locationListener.
         LatLng polije = new LatLng(-8.157549, 113.722853);
 
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(polije, zoom));
