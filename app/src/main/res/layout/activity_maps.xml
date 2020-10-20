@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#eee"
-    android:gravity="center"
-    android:orientation="vertical"
-    tools:context=".HomeActivity">
+    tools:context=".MapsActivity" >
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_margin="24dp"
+        android:layout_height="300dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -52,13 +58,6 @@
             android:text="password" />
 
         <Button
-            android:id="@+id/intent_map_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="Go to map activity" />
-
-        <Button
             android:id="@+id/logout_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -66,5 +65,5 @@
             android:text="Logout" />
     </LinearLayout>
 
-
 </LinearLayout>
+

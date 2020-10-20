@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         if (dataLogin.isEmpty()) {
 
         } else {
-            startActivity(new Intent(MainActivity.this, HomeActivity.class));
+            startActivity(new Intent(MainActivity.this, MapsActivity.class));
             finish();
         }
 
@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
                     editor.putString("login", username);
                     editor.commit();
 
-                    startActivity(new Intent(MainActivity.this, HomeActivity.class));
+                    startActivity(new Intent(MainActivity.this, MapsActivity.class));
                     finish();
                 } else {
                     Toast.makeText(MainActivity.this, "Username atau password anda salah", Toast.LENGTH_SHORT).show();

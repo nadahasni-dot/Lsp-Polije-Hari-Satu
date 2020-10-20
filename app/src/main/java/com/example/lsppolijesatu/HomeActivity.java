@@ -14,7 +14,7 @@ import com.example.lsppolijesatu.database.SQLiteHelper;
 import com.example.lsppolijesatu.model.ModelDaftar;
 
 public class HomeActivity extends AppCompatActivity {
-    Button logoutButton;
+    Button logoutButton, goToMapButton;
     TextView textNama, textUsername, textEmail, textPassword;
 
     SharedPreferences sharedPreferences;
@@ -53,6 +53,7 @@ public class HomeActivity extends AppCompatActivity {
         textPassword.setText(password);
 
         logoutButton = findViewById(R.id.logout_button);
+        goToMapButton = findViewById(R.id.intent_map_button);
         logoutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,6 +61,14 @@ public class HomeActivity extends AppCompatActivity {
                 editor.commit();
 
                 startActivity(new Intent(HomeActivity.this, MainActivity.class));
+                finish();
+            }
+        });
+
+        goToMapButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(HomeActivity.this, MapsActivity.class));
                 finish();
             }
         });
